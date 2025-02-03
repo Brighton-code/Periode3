@@ -4,8 +4,8 @@
     {
         static void Main(string[] args)
         {
-            string inputString = string.Empty;
-            int input;
+            string inputString;
+            double input;
             bool running = true;
 
             Console.WriteLine("What is de test score:");
@@ -15,7 +15,7 @@
                 inputString = Console.ReadLine().Trim();
                 try
                 {
-                    input = Convert.ToInt32(inputString);
+                    input = Convert.ToDouble(inputString);
                     running = false;
                     Console.WriteLine(Result(input));
                 }
@@ -26,14 +26,14 @@
             } while (running);
         }
 
-        private static string Result(int input)
+        private static string Result(double input)
         {
             return input switch
             {
-                <= 3 => "Slecht",
-                <= 5 => "Matig",
-                <= 7 => "Voldoende",
-                <= 9 => "Goed",
+                > 1.0 and < 4.0 => "Slecht",
+                < 5.5 => "Matig",
+                < 7.0 => "Voldoende",
+                < 8.5 => "Goed",
                 <= 10 => "Uitstekend",
                 _ => "Invalid input"
             };
