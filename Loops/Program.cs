@@ -14,7 +14,7 @@
                 input = UserInput();
                 if (input > 99 || input < 1)
                 {
-                    Console.WriteLine("Invalid input too high or low!");
+                    Console.WriteLine("Invalid input, range is between 1 and 99");
                     continue;
                 }
                 output = HigherOrLower(input, computer);
