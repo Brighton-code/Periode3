@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{4844D04B-AC58-4E0B-A68F-1D7EB44A5D9F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RockPaperScissors", "RockPaperScissors\RockPaperScissors.csproj", "{55FE15D9-A41A-4FEA-927E-CFFE6804FCD4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp2", "ConsoleApp2\ConsoleApp2.csproj", "{4FC98266-ABB0-4725-8246-FB94F669EA18}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4844D04B-AC58-4E0B-A68F-1D7EB44A5D9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4844D04B-AC58-4E0B-A68F-1D7EB44A5D9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4844D04B-AC58-4E0B-A68F-1D7EB44A5D9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4844D04B-AC58-4E0B-A68F-1D7EB44A5D9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55FE15D9-A41A-4FEA-927E-CFFE6804FCD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55FE15D9-A41A-4FEA-927E-CFFE6804FCD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55FE15D9-A41A-4FEA-927E-CFFE6804FCD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55FE15D9-A41A-4FEA-927E-CFFE6804FCD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FC98266-ABB0-4725-8246-FB94F669EA18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FC98266-ABB0-4725-8246-FB94F669EA18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FC98266-ABB0-4725-8246-FB94F669EA18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FC98266-ABB0-4725-8246-FB94F669EA18}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
