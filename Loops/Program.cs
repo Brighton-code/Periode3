@@ -22,6 +22,26 @@
                 i++;
             } while (input != computer);
             Console.WriteLine($"You won! Amount of guesses {i}!");
+
+            // FizzBuzz loop
+            string outputString = string.Empty;
+            for (int j = 1; j <= 100; j++)
+            {
+                if (j % 3 == 0)
+                {
+                    outputString += "Fizz";
+                }
+                if (j % 5 == 0)
+                {
+                    outputString += "Buzz";
+                }
+                if (outputString.Length == 0)
+                {
+                    outputString = j.ToString();
+                }
+                Console.WriteLine(outputString);
+                outputString = string.Empty;
+            }
         }
 
         private static int UserInput()
