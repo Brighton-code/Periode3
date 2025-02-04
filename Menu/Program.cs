@@ -20,7 +20,7 @@
                 Console.WriteLine(" - Program Find random number (3)");
                 Console.WriteLine(" - Program Fizz Buzz (4)");
                 Console.WriteLine(" - Program Quiz (5)");
-                Console.WriteLine(" - Program Quiz (6)");
+                Console.WriteLine(" - Program Calculator (6)");
                 Console.WriteLine(" - Exit (7)");
 
                 Console.WriteLine("\nTo choose a program type the number behind the progam: \n");
@@ -290,22 +290,32 @@
         private static void Calculator()
         {
             Console.WriteLine("Calculator!\n");
-            Console.WriteLine("Operator allowed\n" +
-                " +\n" +
-                " -\n" +
-                " x\n" +
-                " /\n" +
-                " =\n");
+            Console.WriteLine("Please choose your operator\n" +
+                " (1) Add\n" +
+                " (2) Sub\n" +
+                " (3) Mul\n" +
+                " (4) Div\n");
 
-            int i = 0;
-            List<int> numbers = new List<int>();
-            while (true || numbers.Count < 2)
+            Console.Write("Enter your operators number: ");
+            int action = UserInput();
+            Console.Write("Enter your first number: ");
+            int num1 = UserInput();
+            Console.Write("Enter your second number: ");
+            int num2 = UserInput();
+
+            Console.WriteLine($"Your output is = {Operations(action, num1, num2)}");
+        }
+
+        private static double Operations(int action, int num1, int num2)
+        {
+            return action switch
             {
-                Console.Write($"Number {i}: ");
-                numbers.Add(UserInput());
-
-
-            }
+                1 => num1 + num2,
+                2 => num1 - num2,
+                3 => num1 * num2,
+                4 => num1 / num2,
+                _ => num1 + num2
+            };
         }
     }
     static class MyExtensions
