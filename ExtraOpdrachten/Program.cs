@@ -21,6 +21,22 @@
             Console.WriteLine($"add 10.52 and 39.21 = {Calculator.Add(10.52, 39.21)}");
             Console.WriteLine($"sub 323.12 and 42.12 = {Calculator.Sub(323.12, 42.12)}");
             Console.WriteLine($"{ConfigurationData.ApplicationName}, {ConfigurationData.Version}, {ConfigurationData.MaxUsers}");
+        
+            Car car1 = new Car();
+            Car car2 = new Car("Toyota", "Yaris", Color.Green, "Brighton", 2006, "3A4FY48B67T544929");
+            //car1.DisplayInfo();
+            //car2.DisplayInfo();
+
+            Garage g1 = new Garage("floor 1");
+            Garage g2 = new Garage("floor 2");
+            g2.AddCar(car2);
+            //g2.DisplayList();
+            W_Park wp = new W_Park();
+            wp.AddGarage(g1);
+            wp.AddGarage(g2);
+            wp.AddCar(car1, g1.Name);
+            wp.AddCar(new Car("Test", "dwa", Color.Blue, "dwadwad", 112, "dwad32133123"), g1.Name);
+            wp.DisplayList();
         }
     }
 
@@ -108,5 +124,95 @@
         public const string ApplicationName = "Extra Opdrachten";
         public const string Version = "1";
         public const int MaxUsers = 10;
+    }
+
+    internal class Car
+    {
+        public string Brand;
+        public string Type;
+        public Color Color;
+        public string Owner;
+        public int Year;
+        public string Vin;
+        
+        public Car()
+        {
+            Brand = string.Empty;
+            Type = string.Empty;
+            Color = Color.Red;
+            Owner = string.Empty;
+            Year = 0;
+            Vin = string.Empty;
+        }
+        public Car(string brand, string type, Color color, string owner, int year, string vin)
+        {
+            Brand = brand;
+            Type = type;
+            Color = color;
+            Owner = owner;
+            Year = year;
+            Vin = vin;
+        }
+
+        public void DisplayInfo()
+        {
+            Console.WriteLine($"Car\n brand: {Brand}\n type: {Type}\n color: {Color}\n year: {Year}\n vin: {Vin}\n owner: {Owner}\n");
+        }
+    }
+
+    internal class Garage
+    {
+        private List<Car> _cars = [];
+        public string Name;
+        public Garage(string name)
+        {
+            Name = name;
+        }
+        public void AddCar(Car car)
+        {
+            _cars.Add(car);
+        }
+        public void RemoveCar(Car car)
+        {
+            _cars.Remove(car);
+        }
+
+        public void DisplayList()
+        {
+            foreach (Car car in _cars)
+            {
+                car.DisplayInfo();
+            }
+        }
+    }
+
+    internal class W_Park
+    {
+        private List<Garage> _garages = [];
+
+        public void AddGarage(Garage garage)
+        {
+            _garages.Add(garage);
+        }
+        public void RemoveGarage(Garage garage)
+        {
+            _garages.Remove(garage);
+        }
+        public void AddCar(Car car, string gName)
+        {
+            //Garage garage = _garages.Where(g => g.Name == gName);
+            Garage garage = _garages.Find(g => g.Name == gName);
+            if (garage == null)
+                return;
+            garage.AddCar(car);
+        }
+        public void DisplayList()
+        {
+            foreach (Garage garage in _garages)
+            {
+                Console.WriteLine($"Garage: {garage.Name}");
+                garage.DisplayList();
+            }
+        }
     }
 }
