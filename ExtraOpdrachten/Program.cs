@@ -206,6 +206,12 @@
                 return;
             garage.AddCar(car);
         }
+        public void RemoveCar(Car car, string gName)
+        {
+            Garage garage = _garages.Find(g => g.Name.Equals(gName));
+            if (garage == null) return;
+            garage.RemoveCar(car);
+        }
         public void DisplayList()
         {
             foreach (Garage garage in _garages)
