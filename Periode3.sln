@@ -29,6 +29,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boek", "Boek\Boek.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtraOpdrachten", "ExtraOpdrachten\ExtraOpdrachten.csproj", "{FD66864A-8414-403C-80F6-B58D13CB7A32}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parsing", "Parsing\Parsing.csproj", "{8CC7A37D-8FFE-4402-BF4B-CD45D475BAEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsApp2", "WinFormsApp2\WinFormsApp2.csproj", "{F57BCCB6-7212-4284-A74F-C294AF393742}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +91,14 @@ Global
 		{FD66864A-8414-403C-80F6-B58D13CB7A32}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD66864A-8414-403C-80F6-B58D13CB7A32}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD66864A-8414-403C-80F6-B58D13CB7A32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CC7A37D-8FFE-4402-BF4B-CD45D475BAEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CC7A37D-8FFE-4402-BF4B-CD45D475BAEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CC7A37D-8FFE-4402-BF4B-CD45D475BAEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CC7A37D-8FFE-4402-BF4B-CD45D475BAEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F57BCCB6-7212-4284-A74F-C294AF393742}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F57BCCB6-7212-4284-A74F-C294AF393742}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F57BCCB6-7212-4284-A74F-C294AF393742}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F57BCCB6-7212-4284-A74F-C294AF393742}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
